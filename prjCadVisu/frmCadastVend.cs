@@ -31,11 +31,11 @@ namespace prjCadVisu
             }
             else
             {
-                MessageBox.Show("Dados salvos com sucesso!!!");
-
                 add();
 
                 clear();
+
+                MessageBox.Show("Dados salvos com sucesso!!!");
             }
         }
 
@@ -43,9 +43,6 @@ namespace prjCadVisu
         {
             clear();
         }
-
-
-
 
         //Meus métodos
         public void clear()
@@ -56,12 +53,7 @@ namespace prjCadVisu
 
         public void add()
         {
-            Vendedor vendedor = new Vendedor();
-            vendedor.Nome = txtNome.Text;
-            vendedor.Cpf = txtCpf.Text;
-            
-            nome = vendedor.Nome;
-            cpf = vendedor.Cpf;
+            Vendedor vendedor = new Vendedor(txtNome.Text, txtCpf.Text);
 
             Console.WriteLine(vendedor.Nome);
             Console.WriteLine(vendedor.Cpf);

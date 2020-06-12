@@ -14,6 +14,7 @@ namespace prjCadVisu
     {
         public int clickFrm;
         public String nomeVend, cpfVend;
+        public List<String> dadosVend = new List<String>();
         public Form1()
         {
             InitializeComponent();
@@ -75,8 +76,16 @@ namespace prjCadVisu
             {
                 frmCadastVend cadastVend = new frmCadastVend();
                 cadastVend.ShowDialog();
+
                 nomeVend = cadastVend.nome;
                 cpfVend = cadastVend.cpf;
+
+                Vendedor vendedor = new Vendedor(nomeVend, cpfVend);
+
+                for(int i = 0; i <= vendedor.tamanhoList(); i++)
+                {
+                    dadosVend[i] = vendedor.Dados[i];
+                }
             }
             if(click == 2)
             {
@@ -90,7 +99,7 @@ namespace prjCadVisu
             }
             if(click == 4)
             {
-                frmSelectVend listVend = new frmSelectVend(nomeVend, cpfVend);
+                frmSelectVend listVend = new frmSelectVend(dadosVend);
                 listVend.ShowDialog();
             }
             if(click == 5)
