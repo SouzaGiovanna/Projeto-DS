@@ -33,9 +33,9 @@ namespace prjCadVisu
             {
                 add();
 
-                clear();
-
                 MessageBox.Show("Dados salvos com sucesso!!!");
+
+                clear();
             }
         }
 

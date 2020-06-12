@@ -81,11 +81,6 @@ namespace prjCadVisu
                 cpfVend = cadastVend.cpf;
 
                 Vendedor vendedor = new Vendedor(nomeVend, cpfVend);
-
-                for(int i = 0; i <= vendedor.tamanhoList(); i++)
-                {
-                    dadosVend[i] = vendedor.Dados[i];
-                }
             }
             if(click == 2)
             {
@@ -94,18 +89,18 @@ namespace prjCadVisu
             }
             if(click == 3)
             {
-                /*frmListCliente listCliente = new frmListCliente();
-                listCliente.ShowDialog();*/
+                frmSelectCliente listCliente = new frmSelectCliente();
+                listCliente.ShowDialog();
             }
             if(click == 4)
             {
-                frmSelectVend listVend = new frmSelectVend(dadosVend);
+                frmSelectVend listVend = new frmSelectVend();
                 listVend.ShowDialog();
             }
             if(click == 5)
             {
-                /*frmListProd listProd = new frmListProd();
-                listProd.ShowDialog();*/
+                frmSelectProd listProd = new frmSelectProd();
+                listProd.ShowDialog();
             }
         }
     }

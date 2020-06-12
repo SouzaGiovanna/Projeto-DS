@@ -72,6 +72,18 @@
     <Compile Include="frmCadastVend.Designer.cs">
       <DependentUpon>frmCadastVend.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSelectCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectCliente.Designer.cs">
+      <DependentUpon>frmSelectCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectProd.Designer.cs">
+      <DependentUpon>frmSelectProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelectVend.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastVend.resx">
       <DependentUpon>frmCadastVend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectCliente.resx">
+      <DependentUpon>frmSelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectProd.resx">
+      <DependentUpon>frmSelectProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectVend.resx">
       <DependentUpon>frmSelectVend.cs</DependentUpon>

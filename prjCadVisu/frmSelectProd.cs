@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace prjCadVisu
 {
-    public partial class frmSelectVend : Form
+    public partial class frmSelectProd : Form
     {
-        public frmSelectVend()
+        public frmSelectProd()
         {
             InitializeComponent();
         }
