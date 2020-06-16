@@ -1,6 +1,6 @@
 ﻿namespace prjCadVisu
 {
-    partial class frmCadastProd
+    partial class RegisterProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastProd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
             this.gbProduto = new System.Windows.Forms.GroupBox();
             this.txtVal = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();

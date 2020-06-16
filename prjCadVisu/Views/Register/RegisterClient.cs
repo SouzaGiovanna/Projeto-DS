@@ -1,49 +1,40 @@
-﻿using System;
+﻿using prjCadVisu.DAO;
+using prjCadVisu.Model;
+using System;
 using System.Windows.Forms;
 
 namespace prjCadVisu
 {
-    public partial class frmCadast : Form
+    public partial class RegisterClient : Form
     {
-        public frmCadast()
-        {
-            InitializeComponent();
-        }
+        public RegisterClient() => InitializeComponent();
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if(txtNome.Text.Length == 0 || txtCpfCliente.Text.Length == 0 ||
                 txtRg.Text.Length == 0 || txtEndereco.Text.Length == 0)
-            {
                 MessageBox.Show("Preencha os campos em branco antes de prosseguir");
-            }
+
             else
             {
                 MessageBox.Show("Dados salvos com sucesso!!!");
 
-                add();
-
-                clear();
+                Add();
+                Clear();
             }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            clear();
+            Clear();
         }
 
-
-
-
-
-        //Meus métodos
-
-        public void clear()
+        public void Clear()
         {
             txtNome.Clear();
             txtCpfCliente.Clear();
@@ -51,18 +42,10 @@ namespace prjCadVisu
             txtRg.Clear();
         }
 
-        public void add()
+        public void Add()
         {
-            Cliente cliente = new Cliente();
-            cliente.Nome = txtNome.Text;
-            cliente.Cpf = txtCpfCliente.Text;
-            cliente.Rg = txtRg.Text;
-            cliente.Endereco = txtEndereco.Text;
-
-            Console.WriteLine(cliente.Nome);
-            Console.WriteLine(cliente.Cpf);
-            Console.WriteLine(cliente.Rg);
-            Console.WriteLine(cliente.Endereco);
+            Client client = new Client(txtNome.Text, txtCpfCliente.Text, txtRg.Text, txtEndereco.Text);
+            new ClientDAO().Insert(client);
         }
     }
 }
